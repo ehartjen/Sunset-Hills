@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>JavaScript Base Template</title>
+    <title>Sunset Hills</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">JS Template</a>
+            <a class="navbar-brand" href="/index.html">Sunset Hills</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,45 +35,83 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                        <a class="nav-link" href="/app.html">The App</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About Me</a>
+                        <a class="nav-link" href="http://erichartjen.netlify.app/">About Me</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="flex-shrink-0">
-        <div class="container">
-            <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-            <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
-                CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
+    <main class="flex-shrink-0 mt-8">
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <div class="row ">
+                <h1 class="text-center">Sunset Hills</h1>
+                <h5 class="text-start">The purpose of this App is to help determine whether or not a building will be
+                    able to view the sunset. To give the user orientation we ask your building heights be entered
+                    starting with the most westerly building, and to enter the buildings heights from west to east.</h5>
+
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                <div class="col-6 ">
+                    <h3>Enter Your Buildings Height</h3>
+                    <input id="building1" type="text">Building #1<br>
+                    <input id="building2" type="text">Building #2<br>
+                    <input id="building3" type="text">Building #3<br>
+                    <input id="building4" type="text">Building #4<br>
+                    <input id="building5" type="text">Building #5<br>
+                    <input id="building6" type="text">Building #6<br>
+                    <div class="col" id="outputCol">
+                        <button class="btn btn-success" id="button">Enter Building Heights</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="/img/lxl0_5vbn_161029.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="row mt-3">
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">It's Sunny!</label>
+                    <textarea class="form-control" id="output" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Boooo I can't see the sunset!</label>
+                    <textarea class="form-control" id="output2" rows="3"></textarea>
+                </div>
+
+            </div>
+
+
+        </div>
+        </div>
         </div>
     </main>
 
 
-
     <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container-fluid text-center text-danger">
+        <div class="container-fluid text-center">
             <div class="row">
                 <div class="col">
-                    &copy2021<span class="text-primary">Eric Hartjen || Demo Code</span>
+                    <span class="text-primary text-light">&copy2021 E. Hartjen | Eric.A.Hartjen@gmail.com</span>
                 </div>
                 <div class="col">
-                    <span class="text-light text-uppercase">Eric Hartjen</span>
+                    <span class="text-light text-uppercase">Sunset Hills</span>
                 </div>
                 <div class="col">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-danger"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github fa-2x text-danger"></i></a>
+                    <a href="https://www.linkedin.com/in/eric-hartjen-230714216/" target="_blank"><i
+                            class="fab fa-linkedin fa-2x text-light"></i></a>
+
+                    <a href="https://github.com/ehartjen" target="_blank"><i
+                            class="fab fa-github fa-2x text-light"></i></a>
                 </div>
 
 
@@ -96,6 +134,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.getElementById("button").addEventListener("click", comparebuildings)
+    </script>
 
 </body>
 
